@@ -6,12 +6,12 @@ h1,
 h2,
 h3,
 h4 {
-  color: $font-color !important;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: $font-color;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.4em;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: $padding;
 }
 
 h1 {
@@ -20,6 +20,7 @@ h1 {
   font-weight: 300;
 }
 h2 {
+  color: #333333 !important;
   font-size: 24px;
 }
 h3 {
@@ -27,7 +28,15 @@ h3 {
 }
 h4 {
   font-size: 14px;
-  font-weight:500;
+  font-weight: 600;
+  color: #9B9B9B !important;
+}
+
+.h1-nopadding,
+.h2-nopadding,
+.h3-nopadding,
+.h4-nopadding {
+  margin-bottom: 0 !important;
 }
 
 p,

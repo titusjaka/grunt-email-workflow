@@ -19,7 +19,7 @@
     text-align: center;
   }
 
-  a{
+  a {
     background-color: #ffffff;
     border: solid 1px $primary-color;
     border-radius: $btn-br;
@@ -42,7 +42,7 @@
     background-color: $primary-color;
   }
 
-  a{
+  a {
     background-color: $primary-color;
     border-color: $primary-color;
     color: #ffffff;
@@ -56,9 +56,28 @@
     background-color: transparent;
   }
 
-  a{
+  a {
     background-color: transparent;
     border-color: $primary-color;
     color: $primary-color;
+  }
+}
+
+.btn-expanded {
+  width: 100%;
+
+  table {
+    width: 90%;
+
+    a {
+      text-align: center;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  center {
+    min-width: 0;
   }
 }

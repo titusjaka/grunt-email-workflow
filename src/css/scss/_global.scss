@@ -15,7 +15,7 @@ img {
 }
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   height: 100% !important;
@@ -30,12 +30,12 @@ body {
 // Let's make sure all tables have defaults
 table {
   border-collapse: separate !important;
-  mso-table-lspace: 0pt;
-  mso-table-rspace: 0pt;
+  mso-table-lspace: 0;
+  mso-table-rspace: 0;
   width: 100%;
 
   td {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     vertical-align: top;
   }
