@@ -87,17 +87,9 @@ subject: DevOps ELK RabbitMQ Memory Usage (%)
                             </tr>
                             <tr>
                                 <td>
-                                    Общее состояние кластера.
-                                    <br>Изменяется при:
-                                    <br>- создании индекса
-                                    <br>- открытии индекса
-                                    <br>- размещение индекса на одной ноде
-                                    <br>- авариях.
-                                    <br>Критичный.
-                                    <br>Диагностировать: Смотреть на количество шардов в состоянии unassigned и
-                                    initializing. На управляющем мастере(выполнить на любом мастере curl
-                                    http://localhost:9200/_cat/nodes звёздочкой отмечен управляющий) смотреть лог файл
-                                    (/var/log/elasticsearch-master/devops-elk.log).
+                                    Here is some kind of description:
+                                    <br>-Line 1
+                                    <br>-Line 2
                                 </td>
                             </tr>
                             </tbody>
@@ -108,6 +100,18 @@ subject: DevOps ELK RabbitMQ Memory Usage (%)
                     <td>
                         {{> divider }}
                         {{> button type='secondary' expanded=true align='center' url='https://moira.skbkontur.ru/trigger/7a3599f9-f0f7-404e-abb9-915704c61c9e' title='Open in Moira' }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-center">
+                        {{> divider }}
+                        <img src="../src/img/graph-example.jpeg" alt="Trigger chart">
+                        {{> divider }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{> notice type='warning' text='Please, fix your system or tune this trigger to generate less events.' }}
                     </td>
                 </tr>
             </table>
