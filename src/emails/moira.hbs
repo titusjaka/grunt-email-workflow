@@ -1,6 +1,6 @@
 ---
 layout: default.hbs
-subject: Simple Transactional Email
+subject: DevOps ELK RabbitMQ Memory Usage (%)
 ---
 <span class="preheader">DevOps ELK RabbitMQ Memory Usage (%)</span>
 <table class="main">
@@ -13,7 +13,9 @@ subject: Simple Transactional Email
                         <h4 class="">[DevOps][critical][ELK]</h4>
                     </td>
                 </tr>
-                <tr><td></td></tr>
+                <tr>
+                    <td></td>
+                </tr>
                 <tr>
                     <td>
                         <h2 class="align-left">🔥 ERROR</h2>
@@ -21,13 +23,91 @@ subject: Simple Transactional Email
                 </tr>
                 <tr>
                     <td>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Timestamp</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Target</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Value</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">State</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    14:46 04.05.2018
+                                </td>
+                                <td>
+                                    bst-octo1
+                                </td>
+                                <td>
+                                    1.1554587352
+                                </td>
+                                <td>
+                                    WARN→ERROR
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    07:52 10.04.2018
+                                </td>
+                                <td>
+                                    bst-octo1
+                                </td>
+                                <td>
+                                    0
+                                </td>
+                                <td>
+                                    ERROR→WARN
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+<!--                <tr>
+                    <td>
                         {{> divider }}
+                    </td>
+                </tr>-->
+                <tr>
+                    <td>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Description</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Общее состояние кластера.
+                                    <br>Изменяется при:
+                                    <br>- создании индекса
+                                    <br>- открытии индекса
+                                    <br>- размещение индекса на одной ноде
+                                    <br>- авариях.
+                                    <br>Критичный.
+                                    <br>Диагностировать: Смотреть на количество шардов в состоянии unassigned и
+                                    initializing. На управляющем мастере(выполнить на любом мастере curl
+                                    http://localhost:9200/_cat/nodes звёздочкой отмечен управляющий) смотреть лог файл
+                                    (/var/log/elasticsearch-master/devops-elk.log).
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        {{> button type='secondary' expanded=true align='center' url='https://github.com/leemunroe/grunt-email-workflow' title='Open in Moira' }}
-
+                        {{> divider }}
+                        {{> button type='secondary' expanded=true align='center' url='https://moira.skbkontur.ru/trigger/7a3599f9-f0f7-404e-abb9-915704c61c9e' title='Open in Moira' }}
                     </td>
                 </tr>
             </table>
