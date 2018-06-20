@@ -1,0 +1,152 @@
+---
+layout: default.hbs
+subject: Moira Alert
+---
+<table class="main">
+    <tr>
+        <td class="wrapper">
+            <table>
+                <tr>
+                    <td>
+                        <h1 class="align-left h2-nopadding">WARN! DevOps ELK RabbitMQ Memory Usage (%)</h1>
+                        <h4 class="align-left">[DevOps][critical][ELK]</h4>
+
+                        {{> notice type='throttling' text='Please, fix your system or tune this trigger to generate less events.' }}
+                        {{> divider }}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Timestamp</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Target</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Value</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">State</h5>
+                                </td>
+                                <td>
+                                    <h5 class="align-left h5-nopadding">Note</h5>
+                                </td>
+                            </tr>
+                            <tr class="OK">
+                                <td class="td-width20 td-padding">
+                                    16:43 01.04.2018
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    bst-octo1
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    1.1554587352
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    ERROR - OK
+                                </td>
+                                <td class="td-width20 td-padding">
+
+                                </td>
+                            </tr>
+                            <tr class="ERROR">
+                                <td class="td-width20 td-padding">
+                                    16:43 01.04.2018
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    bst-octo1
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    0
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    OK - ERROR
+                                </td>
+                                <td class="td-width20 td-padding">
+
+                                </td>
+                            </tr>
+                            <tr class="WARN">
+                                <td class="td-width20 td-padding">
+                                    16:43 01.04.2018
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    bst-octo1
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    0
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    OK - WARN
+                                </td>
+                                <td class="td-width20 td-padding">
+
+                                </td>
+                            </tr>
+                            <tr class="EXCEPTION">
+                                <td class="td-width20 td-padding">
+                                    16:43 01.04.2018
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    bst-octo1
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    0
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    NODATA - EXCEPTION
+                                </td>
+                                <td class="td-width20 td-padding">
+                                    Metric has been in bad state for more than 24h.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{> divider }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{{> notice type='description' text='Показывается утилизация процессора по ядрам на тачках с редисом.
+                        <br>Если загрузка одного ядра в течение 5 минут превышает 90%, то у нас проблемы. Скорее всего, редис не справляется.
+<br>
+                        <br>Смотри графики:
+<br>
+                        <br>- https://grafana.skbkontur.ru/dashboard/db/devops-moira?refresh=1m&orgId=1.
+                        <br>Число Metrics to save queue не должно быть выше 10к
+<br>
+                        <br>- https://grafana.skbkontur.ru/dashboard/db/devops-carbon-c-relays?refresh=1m&orgId=1
+                        <br>График Metrics queued обычно в районе 100К
+<br>
+                        <br>This trigger is manipulated by ansible: https://git.skbkontur.ru/devops/moira/blob/master/ansible/group_vars/production/triggers.yml' }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{> button type='secondary' expanded=true align='center' url='https://moira.skbkontur.ru/trigger/7a3599f9-f0f7-404e-abb9-915704c61c9e' title='Open in Moira' }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<div class="footer">
+    <table>
+        <tr>
+            <td class="align-center">
+                <p>Помогите сделать письмо от Мойры лучше, заполните <a
+                        href="https://staff.skbkontur.ru?m=survey-5b2213fd339efc22547af24c">
+                    анекту</a>.
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>

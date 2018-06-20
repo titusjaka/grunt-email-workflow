@@ -15,7 +15,7 @@ img {
 }
 
 body {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   height: 100% !important;
@@ -35,9 +35,24 @@ table {
   width: 100%;
 
   td {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 14px;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
     vertical-align: top;
+    font-weight: 500;
+  }
+
+  .td-width20 {
+    width: 20%;
+  }
+
+  .td-padding {
+    padding-bottom: 10px;
+    padding-right: 3px;
+  }
+
+  .td-nopadding {
+    padding-top: 5px !important;
+    padding-bottom: 0 !important;
   }
 }
 

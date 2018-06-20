@@ -62,3 +62,34 @@
     color: $primary-color;
   }
 }
+
+.btn-moira {
+  table td {
+    background-color: transparent;
+  }
+
+  a {
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.btn-expanded {
+  width: 100%;
+
+  table {
+    width: 100%;
+
+    a {
+      text-align: center;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  center {
+    min-width: 0;
+  }
+}

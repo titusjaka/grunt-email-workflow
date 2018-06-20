@@ -42,6 +42,25 @@
     @include create-notice($notice-color-danger);
   }
 
+  &-throttling {
+    td {
+      border: 1px solid $notice-color-throttling;
+      color: $notice-color-throttling;
+      padding: $notice-padding;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  &-description {
+    td {
+      color: $notice-color-description;
+      padding-bottom: 50px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
   // Size Variations
   &-lg td {
     font-size: ($notice-font-size * 1.2);
